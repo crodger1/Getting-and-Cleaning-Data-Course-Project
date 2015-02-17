@@ -12,5 +12,7 @@ The instructions for the assingment were as follows:
 * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 The data were downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
 There is more information about this dataset here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 
