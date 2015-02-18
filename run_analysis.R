@@ -14,26 +14,54 @@
 
 # repeat process with train directory (cbind subject train with y_train and x_train)
 
-## read in the labels document
-  features<-read.table("./UCI HAR Dataset/features.txt")
-  as.list(features)
-  head(features)
-  features<-features[,2]
+setwd("C:/Users/crodger/Documents/GitHub/Getting-and-Cleaning-Data-Course-Project")
+
+## read in the labels for the data and convert to a vector to be used as names
+  features<-read.table("./UCI HAR Dataset/features.txt",stringsAsFactors=FALSE)
+  vnames<-features[,2]
   
 ## read in the datasets
-  subject_test<-read.table("./UCI HAR Dataset/test/subject_test.txt")
-  head(subject_test)
-  y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")
-  head(y_test)
+  ## read in the main analysis datasets (x_test and x_train)
   x_test<-read.table("./UCI HAR Dataset/test/x_test.txt")
   head(x_test[,3:6])
-  
-  attributes(features)
-  attributes(x_test)
-  
-  attr(x_test, "names")<-features
-  head(x_test)
-  
+  attr(x_test, "names")<-vnames
+  head(x_test[,3:6])
+
+  x_train<-read.table("./UCI HAR Dataset/train/x_train.txt")
+  head(x_train[,3:6])
+  attr(x_train, "names")<-vnames
+  head(x_train[,3:6])
+
+  ## combine these data with the subject (person tested) and the activity (e.g. walking)
+
+  subject_test<-read.table("./UCI HAR Dataset/test/subject_test.txt")
+  attr(subject_test, "names")<-c("Subject")
+  head(subject_test)
+
+  y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")
+  attr(y_test, "names")<-c("Activity")
+
+  head(y_test)
+
+dim(subject_test)
+   dim(y_test)
+   dim(x_test)
+  test<-cbind(subject_test,y_test,x_test)
+  dim(test)
+  head(test[,1:10])
+
+
+attr(x_train, "names")<-vnames
+head(x_train[,3:6])
+
+
+
+subject_test<-read.table("./UCI HAR Dataset/test/subject_test.txt")
+head(subject_test)
+y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")
+head(y_test)
+
+
   features2<-as.list(features)
   
 dim(subject_test)
