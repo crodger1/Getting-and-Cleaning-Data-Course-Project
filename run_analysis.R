@@ -19,20 +19,36 @@ setwd("C:/Users/crodger/Documents/GitHub/Getting-and-Cleaning-Data-Course-Projec
 ## read in the labels for the data and convert to a vector to be used as names
   features<-read.table("./UCI HAR Dataset/features.txt",stringsAsFactors=FALSE)
   vnames<-features[,2]
-  
-## read in the datasets
+  ## create an index for the columns that should be kept
+  means<-grep("mean()",vnames,ignore.case=TRUE)
+  stds<-grep("std()",vnames,ignore.case=TRUE)
+  keep<-sort(c(means,stds))
+
   ## read in the main analysis datasets (x_test and x_train)
   x_test<-read.table("./UCI HAR Dataset/test/x_test.txt")
   head(x_test[,3:6])
   attr(x_test, "names")<-vnames
   head(x_test[,3:6])
+    ## restrict to means and standard deviations
+    x_test<-x_test[,keep]
+    head(x_test[,1:6])
 
   x_train<-read.table("./UCI HAR Dataset/train/x_train.txt")
   head(x_train[,3:6])
   attr(x_train, "names")<-vnames
   head(x_train[,3:6])
+    ## restrict to means and standard deviations
+    x_train<-x_train[,keep]
+    head(x_train[,1:6])
+
+
+
+#grep("mean",vnames,ignore.case=TRUE)+2
+# x_test2<-x_test[,grep("mean",vnames,ignore.case=TRUE)]
+# head(x_test2[,1:10])
 
   ## combine these data with the subject (person tested) and the activity (e.g. walking)
+# attr(x_test,"names")
 
   subject_test<-read.table("./UCI HAR Dataset/test/subject_test.txt")
   attr(subject_test, "names")<-c("Subject")
@@ -40,34 +56,35 @@ setwd("C:/Users/crodger/Documents/GitHub/Getting-and-Cleaning-Data-Course-Projec
 
   y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")
   attr(y_test, "names")<-c("Activity")
-
   head(y_test)
-
-dim(subject_test)
-   dim(y_test)
-   dim(x_test)
-  test<-cbind(subject_test,y_test,x_test)
-  dim(test)
-  head(test[,1:10])
+  ## combine the test data with subject and activity
+    test<-cbind(subject_test,y_test,x_test)
 
 
-attr(x_train, "names")<-vnames
-head(x_train[,3:6])
-
-
-
-subject_test<-read.table("./UCI HAR Dataset/test/subject_test.txt")
-head(subject_test)
-y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")
-head(y_test)
-
-
-  features2<-as.list(features)
+  subject_train<-read.table("./UCI HAR Dataset/train/subject_train.txt")
+  attr(subject_train, "names")<-c("Subject")
+  head(subject_train)
   
-dim(subject_test)
-dim(y_test)
-dim(x_test)
+  y_train<-read.table("./UCI HAR Dataset/train/y_train.txt")
+  attr(y_train, "names")<-c("Activity")
+  head(y_train)
+  ## combine the train data with subject and activity
+    train<-cbind(subject_train,y_train,x_train)
 
+  ## combine the full test and train data
+    dim(train)
+    dim(test)
+    nrow(train)+nrow(test)
+    fulldata<-rbind(train,test)
+    dim(fulldata)
 
+  ## create a list of variables to sumamrize (need to exclude the grouping vars of Subject and Activity)
+  vars<-attr(fulldata[,-c(1,2)],"names")
+  
+  library(dplyr)
+  
+  mean_data <- fulldata %>%
+    group_by(Subject,Activity) %>%
+    summarise_each(funs(mean))
 
-?read.table
+  
