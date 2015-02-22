@@ -2,6 +2,17 @@ Data dictionary for summary_file.txt
 
 These data contain the average values, by Subject and Activity, of the mean (mean) and standard deviation (std) measures in the source data. The source data for each subject is indicated by the "Source" variable.  There are 69 total variables in the summary file and 180 observations.
 
+The source data is described fully in a README.txt file in the UCI HAR Dataset folder.  Some detail is included here for quick reference, but for additional detail please refer to the source readme.
+
+
+That file notes:
+    The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+    The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+
+As noted above, the summary_txt file differs in that it takes the average values for the activities by subject, and retains only the information on mean() and std() data.
+
 The description of the variables is in the following format:
 
 Variable Name: Description
