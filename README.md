@@ -17,7 +17,7 @@ Specifically, run_analysis.R does the following:
 * creates a tidy dataset with the _average_ of each mean and standard deviation (std) in the source data
 * this final dataset is collapsed to the Source, Subject, and Activity level (one record for each activity type per subject)
 
-A data dictionary is provided (data_dictionary.txt) which describes the included variables
+A code book is provided (code_book.txt) which describes the included variables
 
 The source data  were downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
