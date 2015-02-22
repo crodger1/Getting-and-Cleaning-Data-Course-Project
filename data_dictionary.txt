@@ -1,0 +1,77 @@
+Data dictionary for summary_file.txt
+
+These data contain the average values, by Subject and Activity, of the mean (mean) and standard deviation (std) measures in the source data. The source data for each subject is indicated by the "Source" variable.  There are 69 total variables in the summary file and 180 observations.
+
+The description of the variables is in the following format:
+
+Variable Name: Description
+
+Source: Source of data (Train or Test data)
+Subject: Individual (subject) being studied
+Activity: Activity engaged in (e.g. Walking)
+tBodyAcc-mean()-X: Average value of tBodyAcc-mean()-X measurement
+tBodyAcc-mean()-Y: Average value of tBodyAcc-mean()-Y measurement
+tBodyAcc-mean()-Z: Average value of tBodyAcc-mean()-Z measurement
+tBodyAcc-std()-X: Average value of tBodyAcc-std()-X measurement
+tBodyAcc-std()-Y: Average value of tBodyAcc-std()-Y measurement
+tBodyAcc-std()-Z: Average value of tBodyAcc-std()-Z measurement
+tGravityAcc-mean()-X: Average value of tGravityAcc-mean()-X measurement
+tGravityAcc-mean()-Y: Average value of tGravityAcc-mean()-Y measurement
+tGravityAcc-mean()-Z: Average value of tGravityAcc-mean()-Z measurement
+tGravityAcc-std()-X: Average value of tGravityAcc-std()-X measurement
+tGravityAcc-std()-Y: Average value of tGravityAcc-std()-Y measurement
+tGravityAcc-std()-Z: Average value of tGravityAcc-std()-Z measurement
+tBodyAccJerk-mean()-X: Average value of tBodyAccJerk-mean()-X measurement
+tBodyAccJerk-mean()-Y: Average value of tBodyAccJerk-mean()-Y measurement
+tBodyAccJerk-mean()-Z: Average value of tBodyAccJerk-mean()-Z measurement
+tBodyAccJerk-std()-X: Average value of tBodyAccJerk-std()-X measurement
+tBodyAccJerk-std()-Y: Average value of tBodyAccJerk-std()-Y measurement
+tBodyAccJerk-std()-Z: Average value of tBodyAccJerk-std()-Z measurement
+tBodyGyro-mean()-X: Average value of tBodyGyro-mean()-X measurement
+tBodyGyro-mean()-Y: Average value of tBodyGyro-mean()-Y measurement
+tBodyGyro-mean()-Z: Average value of tBodyGyro-mean()-Z measurement
+tBodyGyro-std()-X: Average value of tBodyGyro-std()-X measurement
+tBodyGyro-std()-Y: Average value of tBodyGyro-std()-Y measurement
+tBodyGyro-std()-Z: Average value of tBodyGyro-std()-Z measurement
+tBodyGyroJerk-mean()-X: Average value of tBodyGyroJerk-mean()-X measurement
+tBodyGyroJerk-mean()-Y: Average value of tBodyGyroJerk-mean()-Y measurement
+tBodyGyroJerk-mean()-Z: Average value of tBodyGyroJerk-mean()-Z measurement
+tBodyGyroJerk-std()-X: Average value of tBodyGyroJerk-std()-X measurement
+tBodyGyroJerk-std()-Y: Average value of tBodyGyroJerk-std()-Y measurement
+tBodyGyroJerk-std()-Z: Average value of tBodyGyroJerk-std()-Z measurement
+tBodyAccMag-mean(): Average value of tBodyAccMag-mean() measurement
+tBodyAccMag-std(): Average value of tBodyAccMag-std() measurement
+tGravityAccMag-mean(): Average value of tGravityAccMag-mean() measurement
+tGravityAccMag-std(): Average value of tGravityAccMag-std() measurement
+tBodyAccJerkMag-mean(): Average value of tBodyAccJerkMag-mean() measurement
+tBodyAccJerkMag-std(): Average value of tBodyAccJerkMag-std() measurement
+tBodyGyroMag-mean(): Average value of tBodyGyroMag-mean() measurement
+tBodyGyroMag-std(): Average value of tBodyGyroMag-std() measurement
+tBodyGyroJerkMag-mean(): Average value of tBodyGyroJerkMag-mean() measurement
+tBodyGyroJerkMag-std(): Average value of tBodyGyroJerkMag-std() measurement
+fBodyAcc-mean()-X: Average value of fBodyAcc-mean()-X measurement
+fBodyAcc-mean()-Y: Average value of fBodyAcc-mean()-Y measurement
+fBodyAcc-mean()-Z: Average value of fBodyAcc-mean()-Z measurement
+fBodyAcc-std()-X: Average value of fBodyAcc-std()-X measurement
+fBodyAcc-std()-Y: Average value of fBodyAcc-std()-Y measurement
+fBodyAcc-std()-Z: Average value of fBodyAcc-std()-Z measurement
+fBodyAccJerk-mean()-X: Average value of fBodyAccJerk-mean()-X measurement
+fBodyAccJerk-mean()-Y: Average value of fBodyAccJerk-mean()-Y measurement
+fBodyAccJerk-mean()-Z: Average value of fBodyAccJerk-mean()-Z measurement
+fBodyAccJerk-std()-X: Average value of fBodyAccJerk-std()-X measurement
+fBodyAccJerk-std()-Y: Average value of fBodyAccJerk-std()-Y measurement
+fBodyAccJerk-std()-Z: Average value of fBodyAccJerk-std()-Z measurement
+fBodyGyro-mean()-X: Average value of fBodyGyro-mean()-X measurement
+fBodyGyro-mean()-Y: Average value of fBodyGyro-mean()-Y measurement
+fBodyGyro-mean()-Z: Average value of fBodyGyro-mean()-Z measurement
+fBodyGyro-std()-X: Average value of fBodyGyro-std()-X measurement
+fBodyGyro-std()-Y: Average value of fBodyGyro-std()-Y measurement
+fBodyGyro-std()-Z: Average value of fBodyGyro-std()-Z measurement
+fBodyAccMag-mean(): Average value of fBodyAccMag-mean() measurement
+fBodyAccMag-std(): Average value of fBodyAccMag-std() measurement
+fBodyBodyAccJerkMag-mean(): Average value of fBodyBodyAccJerkMag-mean() measurement
+fBodyBodyAccJerkMag-std(): Average value of fBodyBodyAccJerkMag-std() measurement
+fBodyBodyGyroMag-mean(): Average value of fBodyBodyGyroMag-mean() measurement
+fBodyBodyGyroMag-std(): Average value of fBodyBodyGyroMag-std() measurement
+fBodyBodyGyroJerkMag-mean(): Average value of fBodyBodyGyroJerkMag-mean() measurement
+fBodyBodyGyroJerkMag-std(): Average value of fBodyBodyGyroJerkMag-std() measurement
